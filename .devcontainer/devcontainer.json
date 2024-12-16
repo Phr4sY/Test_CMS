@@ -1,0 +1,19 @@
+{
+    "name": "Python Dev Environment",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "workspaceFolder": "/workspace",
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/workspace,type=bind"
+    ],
+    "forwardPorts": [
+        5500,
+        8080
+    ],
+    "runArgs": [
+        "--network=test_cms_dev_network"
+    ],
+    "remoteUser": "vscode"
+}
